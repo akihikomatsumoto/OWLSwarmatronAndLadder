@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 787.0, 214.0, 556.0, 535.0 ],
+		"rect" : [ 501.0, 181.0, 556.0, 535.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,71 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 90.0, 9.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Pitch"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 168.0, 9.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "Cluster"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 262.0, 9.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "CF"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 371.0, 9.0, 150.0, 20.0 ],
+					"style" : "",
+					"text" : "VCA"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "scope~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 297.0, 306.0, 130.0, 130.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-5",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 262.0, 115.0, 79.0, 22.0 ],
+					"patching_rect" : [ -22.0, 88.0, 79.0, 22.0 ],
 					"style" : "",
 					"text" : "receive~ test"
 				}
@@ -55,7 +114,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 215.0, 219.0, 66.0, 22.0 ],
+					"patching_rect" : [ 311.0, 224.0, 66.0, 22.0 ],
 					"style" : "",
 					"text" : "send~ test"
 				}
@@ -318,7 +377,6 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 90.0, 145.0, 179.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"exportfolder" : "Macintosh HD:/Users/akihiko/Dropbox/Eurorack/OWLModular/OwlGenPatches-master/SwarmaAndLadder/",
 						"exportnotifier" : "OWLwatcher"
 					}
 ,
@@ -468,7 +526,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"order" : 1,
+					"order" : 2,
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -477,6 +535,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
 					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"order" : 1,
+					"source" : [ "obj-1", 1 ]
 				}
 
 			}
@@ -607,7 +673,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "SwarmaAndLadder.gendsp",
-				"bootpath" : "~/Dropbox/Eurorack/OWLModular/OwlGenPatches-master/SwarmaAndLadder/code",
+				"bootpath" : "/Volumes/EXHDD/OWL/SwarmaAndLadder/code",
 				"patcherrelativepath" : "../code",
 				"type" : "gDSP",
 				"implicit" : 1
@@ -615,7 +681,7 @@
 , 			{
 				"name" : "moogLadderFilter.genexpr",
 				"bootpath" : "/Users/Shared/Max 7/Examples/gen",
-				"patcherrelativepath" : "../../../../../../../Shared/Max 7/Examples/gen",
+				"patcherrelativepath" : "../../../../../Users/Shared/Max 7/Examples/gen",
 				"type" : "GenX",
 				"implicit" : 1
 			}
